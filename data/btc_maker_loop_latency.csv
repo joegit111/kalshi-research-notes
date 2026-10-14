@@ -1,0 +1,4 @@
+latency_model,pnl_cents_per_round_trip,lo,hi,losing_days_of_22
+zero latency (exit posted at the instant of the fill),0.066,0.034,0.098,
+100 ms on the first exit post only; re-posts free (best case; understates the damage),0.005,-0.025,0.036,
+34 ms on every post (measured laptop round trip 33.5 ms),-0.120,-0.164,-0.076,20

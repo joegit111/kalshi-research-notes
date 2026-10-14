@@ -1,0 +1,11 @@
+# Following Polymarket into Kalshi: a timestamp artifact
+
+The idea: when Polymarket's price on a game moves suddenly and Kalshi has not caught up, take the Kalshi touch. It was tested three times in September and October 2026 on MLB, NFL and soccer game markets, each time with the cells fixed before running (a declaration file, then the code's docstring) (see [preregistrations/](../preregistrations/)).
+
+Round one used per-second Polymarket data and a plain threshold rule. Every cell was negative; at the 3-point threshold the result was -2.6c [-3.8, -1.4] per contract net of fee. A later screen that seemed to show Polymarket leading Kalshi started from Kalshi moves that did happen, so it was positive by construction; it prompted rounds two and three.
+
+Round two (Q4b) narrowed to sudden, clean, in-game moves on a tight Polymarket book. Timed at our own receive time, it lost 0.97c [-1.79, -0.15]. Timed at the start of the Polymarket second, it made +2.2c [+1.4, +3.0] at a median touch of about $45. That second timing was labelled unattainable in the pre-registration, but it suggested faster Polymarket data might rescue the idea.
+
+Round three (Q4c) re-timed every signal from the raw tick archive, taking the receive time of the first message at which the move was visible, which is what a live reader of the same feed would have seen. At a 100 ms order delay the result was -0.62c [-1.30, +0.07], inconclusive by the pre-registered rule with a negative point estimate; at an ideal 0 ms it was -0.17c [-0.88, +0.55]. Of 1,879 signals, 1,107 (59%) were discarded because Kalshi had already moved at least half the distance by the time the Polymarket move was visible. The +2.2c came from stamping each Polymarket move at the start of its second, which dates the move before it actually happened. Retimed from the raw ticks, the edge disappears.
+
+Two related measurements: on soccer goals Kalshi's price is half way through its move about 0.3 s before Polymarket's, if the two venues' clocks agree, and Polymarket's taker fee on sports, measured from on-chain fills, is 0.05 x p x (1 - p) per contract. Following Polymarket is closed for September data. An October holdout is optional and nothing in the three rounds argues for running it.

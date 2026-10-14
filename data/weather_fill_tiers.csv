@@ -1,0 +1,5 @@
+tier,n,capture_30min_c,lo,hi
+all fills (upper bound),19173,0.47,0.42,0.53
+shrank only (needs front of queue or cancels),12116,1.20,1.13,1.26
+traded through plus level cleared,7057,-0.77,-0.95,-0.60
+traded through (provable),4281,-1.47,-1.60,-1.34

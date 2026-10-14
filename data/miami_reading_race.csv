@@ -1,0 +1,7 @@
+window,contracts,taker_edge_c,lo,hi
+70 to 10 s before,1299344,1.52,0.35,2.67
+10 to 2 s before,185607,4.52,1.02,7.93
+2 to 0 s before,139009,8.38,4.67,12.60
+0 to 2 s after,299012,7.54,5.40,9.76
+2 to 10 s after,208143,0.77,-2.25,3.43
+10 to 70 s after,1532341,0.57,-0.42,1.61

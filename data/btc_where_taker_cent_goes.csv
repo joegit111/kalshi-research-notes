@@ -1,0 +1,4 @@
+component,cents_per_contract,source
+taker net loss,1.02,MEASURED: every public KXBTC15M print 2026-09-20..26 (1.44B contracts) held to settlement
+to makers (gross),0.20,MEASURED: same prints; makers' gross settlement P&L
+to Kalshi fees,0.82,ARITHMETIC: taker net loss minus maker gross (Kalshi's fee take ~4x maker gross)
